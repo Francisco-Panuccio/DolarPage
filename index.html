@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Dolar Page</title>
 </head>
 
-<body>
-    <script src="main.js"></script>
+<body class="dark-body light-body">
+
+    <header class="dark-header light-header">
+        <h1>$DOLARPAGE</h1>
+        <button id="switch" class="switch">
+            <span><img src="./iconos/sun.png" alt="Sun Logo" class="sol"></span>
+            <span><img src="./iconos/moon.png" alt="Moon Logo" class="luna"></span>
+        </button>
+    </header>
+
+    <main>
+        <div id="divDolar" class="dark-dolar light-dolar">
+            <p>Dolar Oficial: <span class="spinner"></span><span id="oficial"></span></p>
+            <p>Dolar Blue: <span class="spinner"></span><span id="blue"></span></p>
+            <p>Dolar Solidario: <span class="spinner"></span><span id="solidario"></span></p>
+        </div>
+        <p class="dark-p light-p">Conversor Pesos / Dolar Blue:</p>
+        <div id="conversion" class="dark-conversion light-conversion">
+            <span>$<input type="text" id="pesos" placeholder="Inserte Pesos"></span>
+            <span>$<input type="text" id="dolares" placeholder="Inserte Dolares"></span>
+        </div>
+    </main>
+
+    <script src="./js/funciones.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 
 </html>
