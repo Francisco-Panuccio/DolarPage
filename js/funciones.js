@@ -9,6 +9,7 @@ function dolarFetch() {
     .then(response => response.json())
     .then(({oficial, blue, solidario}) => {
         hideSpinner()
+        showInputs()
         Doficial.innerText = `${"$" + oficial.toFixed(2)}`;
         Dblue.innerText = `${"$" + blue.toFixed(2)}`;
         Dsolidario.innerText = `${"$" + solidario.toFixed(2)}`;
@@ -29,4 +30,9 @@ function hideSpinner() {
     for(const spinners of spanDolar) {
         spinners.className = "spinnerOut";
     }
+}
+
+function showInputs() {
+    inputDolares.classList.add("inp");
+    inputPesos.classList.add("inp");
 }

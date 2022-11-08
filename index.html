@@ -12,23 +12,22 @@
 <body class="dark-body light-body">
 
     <header class="dark-header light-header">
-        <h1>$DOLARPAGE</h1>
-        <button id="switch" class="switch">
-            <span><img src="./iconos/sun.png" alt="Sun Logo" class="sol"></span>
-            <span><img src="./iconos/moon.png" alt="Moon Logo" class="luna"></span>
+        <h1 class="title">$ <span class="titleHead">DOLARPAGE</span><span class="title"> $</span></h1>
+        <button id="switch" class="switch-dark switch-light">
+            <div class="luna sol" id="imagenMode"></div>
         </button>
     </header>
 
-    <main>
-        <div id="divDolar" class="dark-dolar light-dolar">
+    <main class="dark-main light-main">
+        <div id="divDolar">
             <p>Dolar Oficial: <span class="spinner"></span><span id="oficial"></span></p>
             <p>Dolar Blue: <span class="spinner"></span><span id="blue"></span></p>
             <p>Dolar Solidario: <span class="spinner"></span><span id="solidario"></span></p>
         </div>
-        <p class="dark-p light-p">Conversor Pesos / Dolar Blue:</p>
+        <p>Conversor Pesos / Dolar Blue:</p>
         <div id="conversion" class="dark-conversion light-conversion">
-            <span>$<input type="text" id="pesos" placeholder="Inserte Pesos"></span>
-            <span>$<input type="text" id="dolares" placeholder="Inserte Dolares"></span>
+            <span>$ <span class="spinner"></span><input type="text" id="pesos" placeholder="Inserte Pesos" class="hideInput"></span>
+            <span>$ <span class="spinner"></span><input type="text" id="dolares" placeholder="Inserte Dolares" class="hideInput"></span>
         </div>
     </main>
 

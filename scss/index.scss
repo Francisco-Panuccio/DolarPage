@@ -24,63 +24,67 @@ header {
   width: 90%;
   border-radius: .5rem;
   padding: 1.5rem 2rem;
-    h1 {
+    .title {
       font-size: 8rem;
       grid-column: 1 / span 14;
+      text-shadow: -4px 0 green;
+    }
+    .titleHead {
+      text-shadow: none;
     }
     button {
       display: flex;
-      background-color: #343D5B;
       position: relative;
       border-radius: 100rem;
+      width: 5rem;
+      height: 5rem;
       outline: none;
       cursor: pointer;
       border: none;
-        span {
-          width: 3rem;
-          height: 3rem;
-          line-height: 3rem;
-          display: block;
-          background: none;
-          color: #fff;
-            .luna, .sol {
-              width: 3rem;
-              height: 3rem;
-            }
+        #imagenMode {
+          margin: auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 4rem;
+          height: 4rem;
         }
     }
 }
 
 main {
-  #divDolar {
-    width: 90%;
-    padding: 5rem 0 0 0;
-    margin: 3rem auto;
-      p {
-        padding: 1rem;
-        font-size: 2rem;
-        text-decoration: underline;
-        text-align: center;
-      }
+  border-radius: 5rem;
+  width: 50%;
+  margin: auto;
+    #divDolar {
+      width: 90%;
+      padding: 0;
+      margin: 3rem auto;
+        p {
+          padding: 1rem;
+          font-size: 2rem;
+          text-decoration: underline;
+          text-align: center;
+        }
+    }
+    p {
+      font-size: 2.5rem;
+      padding: 0;
+      text-align: center;
+    }
   }
-  p {
-    font-size: 2.5rem;
-    padding: 5rem 0 0 0;
-    text-align: center;
-  }
-}
 
 #conversion {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5rem;
     span {
       font-size: 1.5rem;
-        #pesos {
-          margin: 5rem 3rem 5rem 0;
-        }
-        #dolares {
-          margin: 5rem 0 5rem 0;
+      margin: 0 1rem 0 1rem;
+        input {
+          margin: 4rem 0 0 0;
+          border-radius: 1rem;
+          text-align: center;
         }
     }
 }
@@ -96,16 +100,29 @@ main {
     h1 {
       color: $color-principal;
     }
+    .switch-light {
+      background-color: yellow;
+        .luna {
+          background: url("../iconos/sun.svg");
+        }
+    }
 }
 
-.dark-dolar {
-  p {
-    color: $color-principal;
-  }
-}
-
-.dark-p {
-  color: $color-principal;
+.dark-main {
+  border: .1rem solid $color-principal;
+    #divDolar {
+      p {
+        color: $color-principal;
+      }
+    }
+    p {
+      color: $color-principal;
+    }
+    #conversion {
+      span {
+        color: $color-principal;
+      }
+    }
 }
 
 /* Light Mode */
@@ -119,18 +136,30 @@ main {
     h1 {
       color: $color-secundario;
     }
+    .switch-dark {
+      background-color: #343D5B;
+        .sol {
+          background: url("../iconos/moon.png");
+        }
+    }
 }
 
-.light-dolar {
-  p {
-    color: $color-secundario;
-  }
+.light-main {
+  border: .1rem solid $color-secundario;
+    #divDolar {
+        p {
+          color: $color-secundario;
+        }
+    }
+    p {
+      color: $color-secundario;
+    }
+    #conversion {
+      span {
+        color: $color-secundario;
+      }
+    }
 }
-
-.light-p {
-  color: $color-secundario;
-}
-
 
 .spinner {
   display: inline-block;
@@ -157,4 +186,12 @@ main {
 
 .spinnerOut {
   display: none;
+}
+
+.hideInput {
+  display: none;
+}
+
+.inp {
+  display: unset;
 }
